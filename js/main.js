@@ -8,12 +8,15 @@ carouselElement.append(x);
 
 let y = ["./img/02.webp","./img/03.webp", "./img/04.webp", "./img/05.webp"]
 
-console.log(y)
 
-y.className = "slide hidden";
-carouselElement.append(y);
 
 for (let c = 0; c < y.length; c++) {
-    y[c].src = document.createElement("img");
-    
+
+    y[c] = document.createElement("img");
+    y[c].src = y[c]
+    carouselElement.append(y[c]);
+    y.className = "slide hidden";
 }
+
+
+console.log(y);
